@@ -1,0 +1,67 @@
+.trending-products-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .trending-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .trending-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.trend-item {
+  background-color: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trend-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.trend-item-content {
+  padding: 20px;
+}
+
+.trend-item h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #2d3748;
+}
+
+.trend-item p {
+  font-size: 0.9375rem;
+  color: #4a5568;
+  margin-bottom: 16px;
+}
+
+.spike-percentage {
+  font-weight: bold;
+  color: #48bb78;
+}
+
+.trend-graph {
+  height: 128px;
+  width: 100%;
+  margin-top: 16px;
+}
